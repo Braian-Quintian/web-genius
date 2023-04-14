@@ -51,9 +51,9 @@ function handleNavLinksClick() {
 // Función para manejar el evento "click" en los botones
 function handleButtonLinksClick() {
   const botones = {
-    boton1: '/HTML/ejercicio1.html',
-    boton2: '/HTML/ejercicio2.html',
-    boton3: '/HTML/ejercicio3.html',
+    boton1: 'ejercicio1.html',
+    boton2: 'ejercicio2.html',
+    boton3: 'ejercicio3.html',
   };
 
   document.addEventListener('click', function(event) {

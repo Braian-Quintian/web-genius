@@ -571,6 +571,7 @@ a:hover {
     .knowledge__picture{
         grid-row: 1/2;
         justify-self: center;
+        width: 400px;
     }
 
     .testimony__container{
