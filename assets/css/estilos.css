@@ -1,0 +1,417 @@
+.elemento-fondo {
+    margin-bottom: 9em;
+}
+.animation {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top:0;
+    left:0;
+}
+canvas {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+
+.header{
+    padding-top: 0%;
+    padding-bottom: 2%;
+}
+.about{
+    padding-top: 0%;
+    padding-bottom: 2%;
+}
+/* El resto del código permanece igual */
+:root {
+    --padding-container: 100px 0;
+}
+/* Estilos adicionales para la sección hero */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.hero-content {
+    text-align: center;
+    color: #fff;
+    max-width: 800px;
+    z-index: 9999;
+}
+  
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+  
+.hero-content {
+    margin-top: 10%; 
+    padding: 1%;
+    font-size: 1.5rem;
+    margin-bottom: 2rem; 
+}
+  
+.button {
+    display: inline-block;
+    background-color: #fff;
+    color: #333;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+  
+.button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/*--------NAVEGADOR--------*/
+
+#navbar {
+    --padding-container: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 20px;
+    background-color: transparent;
+    transition: all 0.35s ease-in-out;
+    border-radius: 0.0em 0.0em 0.8em 0.8em;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+  
+#navbar a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+  
+#navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+  
+#navbar li {
+    margin: 5px;
+}
+  
+#navbar .navbar-brand {
+    margin-right: auto;
+    height: auto;
+}
+  
+#navbar .nav {
+    margin-left: auto;
+}
+  
+.nav-link {
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: all 0.35s ease-in-out;
+}
+  
+.nav-link:hover {
+    border: 1px solid #2d2d2d;
+    background-color: #2d2d2d;
+}
+  
+.nav-link.w--current {
+    border: 1px solid #545454;
+    border-radius: 30px;
+    color: #fff;
+    background-color: #1d1d1d;
+}
+  
+a:active,
+a:hover {
+    outline: 0;
+    transition: none !important;
+}
+  
+#navbar.white {
+    background-color: rgb(248, 249, 250);
+}
+  
+#navbar.white a {
+    color: #000;
+}
+  
+#navbar.white a:hover {
+    color: #fff;
+}
+  
+#navbar.white .w--current {
+    color: #fff !important;
+}
+  
+#navbar.white a.navbar-brand:hover {
+    color: #000;
+}
+  
+@media (max-width: 768px) {
+    #navbar {
+        position: fixed;
+        height: auto;
+        padding: 10px;
+    }
+  
+    #navbar ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+  
+    #navbar .navbar-brand,
+    #navbar .nav {
+        margin: 0;
+    }
+  
+    #navbar li {
+        margin: 5px 0;
+    }
+}
+/* FIN DEL NAVBAR */ 
+/*--------ABOUT US--------*/
+
+.about{
+    text-align: center;
+    padding-top: 20px;
+    margin: auto;
+}
+
+.subtitle{
+    color: var(--color-title);
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.about__paragraph{
+    line-height: 1.7;
+}
+
+.about__main{
+    padding-top: 80px;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1em;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+}
+
+.about__icons{
+    display: grid;
+    gap:1em;
+    justify-items: center;
+    width: 260px;
+    overflow: hidden;
+    margin:0 auto;
+}
+
+.about__icon{
+    width: 40px;
+}
+
+/*--------KNOWLEDGE--------*/
+.knowledge{
+    width: auto;
+    height: auto;
+    padding: 5%;
+    margin: auto;
+    background-color: #3c4f65;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1),rgba(255,255,255,0), rgba(255, 255, 255, 1)), url("../img/fondo2.jpg");
+
+    overflow: hidden;
+}
+
+
+.knowledge__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    align-items: center;
+}
+  
+.knowledge__picture {
+    max-width: 500px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+  
+.knowledge__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}  
+  
+.knowledge__overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+.knowledge__texts{
+    text-align: left;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.563);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    padding: 20px;
+    border-radius: 1rem;
+}
+
+.knowledge__paragraph{
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+  
+.cta{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease-out;
+}
+  
+.cta:hover{
+    background-color: white;
+    color: #3c4f65;
+}
+/* INICIO ESTILO DE LOS BOTONES */
+.my-button1 {
+    position: relative;
+    padding: 8px 20px;
+    margin: 20px 0;
+    color: #edf0f4;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+  
+.my-button1::before {
+    content: " ";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #edf0f4;
+    border-left: 2px solid #edf0f4;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+  
+.my-button1::after {
+    content: " ";
+    position: absolute;
+    right: -1px;
+    bottom: -1px;
+    width: 6px;
+    height: 6px;
+    border-right: 2px solid #edf0f4;
+    border-bottom: 2px solid #edf0f4;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+ 
+.my-button1:hover::before,
+.my-button1:hover::after {
+    width: 100%;
+    height: 100%;
+    transition-delay: 0s;
+}
+  
+.my-button1:hover {
+    background-color: #edf0f4;
+    color: #0d6efd;
+    box-shadow: 0 0 20px #edf0f4;
+    transition-delay: 0.5s;
+}
+/* FIN ESTILO DE LOS BOTONES */
+/*--------TESTIMONY--------*/
+.testomony{
+    background-color: #e5e5f7;
+}
+
+.testimony__container{
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    gap:1em;
+    align-items: center;
+}
+
+.testimony__body{
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    justify-content: space-between;
+    align-items: center;
+    gap:2em;
+    opacity: 0;
+    pointer-events: none;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    
+    
+}
+
+.testimony__body--show{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.testimony__img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+
+
+.testimony__texts{
+    max-width: 700px;
+}
+
+.testimony__course{
+    background-color:#5454D4;
+    color:#fff;
+    display: inline-block;
+    padding: 5px;
+
+}
+.testimony__arrow{
+    width: 50px;
+    cursor: pointer;
+}
+.footer{
+    color: white;
+    background-color: #1d1d1d;
+}
