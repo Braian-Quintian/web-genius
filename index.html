@@ -8,8 +8,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="shortcut icon" href="assets/img/destino.png" type="image/x-icon">
-        <link rel="stylesheet" href="/web-genius/assets/css/projects.css">
-        <link rel="stylesheet" href="/web-genius/assets/css/estilos.css">
+        <link rel="stylesheet" href="assets/css/projects.css">
+        <link rel="stylesheet" href="assets/css/estilos.css">
         <title>WEB GENIUS | Presentacion</title>
     </head>
 
@@ -17,7 +17,7 @@
         <!-- INICIO DEL NAV -->
         <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary" id="navbar">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/web-genius/index.html">WEB GENIUS</a>
+                <a class="navbar-brand" href="/HTML/index.html#encabezado">WEB GENIUS</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -36,15 +36,15 @@
                 </div>
             </div>
         </nav>
+        <!-- FIN DEL NAV -->
         <!-- INICIO ANIMACION -->
         <div class="elemento-fondo">
             <div class="animation">
                 <canvas id="locoalien"></canvas>
-                <script type="text/javascript" src="assets/js/script.js"></script>
+                <script type="text/javascript" src="script.js"></script>
             </div>
         </div>
         <!-- FIN ANIMACION -->
-        <!-- FIN DEL NAV -->
         <div class="elemento-fondo">
             <canvas class="animation"></canvas>
             <header class="hero">
@@ -57,7 +57,6 @@
                 </div>
             </header>
         </div>
-
         <main>
             <div class="about">
                 <section class="container about">
@@ -103,7 +102,7 @@
                         <button class="my-button1">Entra</button>
                     </div>
                 </div>
-            </div>        
+            </div>
             <!-- INICIO DE LAS CARDS -->
             <section id="ejercicios-python" class="container">
                 <div class="content container-responsive">
@@ -339,38 +338,40 @@
                 </div>
             </section>
             <!-- FIN DE LAS CARTAS-->
-            <div id="acerca-de-nosotros">
+            <section class="testimony">
+                <div class="testimony__container container">
+                    <img src="assets/icon/leftarrow.svg" class="testimony__arrow" id="before">
+                    <section class="testimony__body testimony__body--show" data-id="1">
+                        <div class="testomony__texts">
+                            <h2 class="subtitle">Mi nombre es Braian Quintian <span class="testimony__course">estudiante del
+                                    Campus.</span></h2>
+                            <p class="testimony__review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est
+                                esse, asperiores eaque totam nulla repudiandae quasi, deserunt culpa exercitationem
+                                blanditiis laborum veniam laboriosam saepe reiciendis dolorem. Cum, ratione voluptatum!</p>
+                        </div>
 
-                <section class="testimony">
-                    <div class="testimony__container container">
-                        <img src="assets/icon/leftarrow.svg" class="testimony__arrow" id="before">
-                        <section class="testimony__body testimony__body--show" data-id="1">
-                            <div class="testomony__texts">
-                                <h2 class="subtitle">Mi nombre es Braian Quintian <span class="testimony__course">estudiante del Campus.</span></h2>
-                                <p class="testimony__review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est
-                                    esse, asperiores eaque totam nulla repudiandae quasi, deserunt culpa exercitationem
-                                    blanditiis laborum veniam laboriosam saepe reiciendis dolorem. Cum, ratione voluptatum!</p>
-                            </div>          
-                            <figure class="testimony__picture">
-                                <img src="assets/img/braian.png" class="testimony__img">
-                            </figure>
-                        </section>                    
-                        <section class="testimony__body" data-id="2">
-                            <div class="testomony__texts">
-                                <h2 class="subtitle">Mi nombre es Mariana Ruales <span class="testimony__course">estudiante del Campus.</span></h2>
-                                <p class="testimony__review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est
+                        <figure class="testimony__picture">
+                            <img src="assets/img/braian.png" class="testimony__img">
+                        </figure>
+                    </section>
+
+                    <section class="testimony__body" data-id="2">
+                        <div class="testomony__texts">
+                            <h2 class="subtitle">Mi nombre es Mariana Ruales <span class="testimony__course">estudiante del
+                                    Campus.</span></h2>
+                            <p class="testimony__review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est
                                 esse, asperiores eaque totam nulla repudiandae blanditiis laborum veniam laboriosam saepe
                                 reiciendis dolorem.
                                 ratione voluptatum!</p>
-                            </div>            
-                            <figure class="testimony__picture">
-                                <img src="assets/img/mariana.png" class="testimony__img">
-                            </figure>
-                        </section>
-                        <img src="assets/icon/right.svg" class="testimony__arrow" id="next">
-                    </div>
-                </section>
-            </div>
+                        </div>
+
+                        <figure class="testimony__picture">
+                            <img src="assets/img/mariana.png" class="testimony__img">
+                        </figure>
+                    </section>
+                    <img src="assets/icon/right.svg" class="testimony__arrow" id="next">
+                </div>
+            </section>
 
 
             <div class="footer">
