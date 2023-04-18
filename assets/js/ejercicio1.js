@@ -14,34 +14,36 @@ Estrato   Tarifa Básica
    5       $80000
    El valor del consumo es la multiplicación entre el consumo del mes por $100 (valor de 1 cm3)
 */
-function validarDatos(){
-    var consumo = document.getElementById("consumo").value;
-    if(isNaN(consumo) || consumo < 0){
-      alert("El consumo del mes debe ser un número mayor o igual a cero.");
-      return false;
-    }
-    return true;
+function liquidarServicio() {
+  let nombre = document.getElementById("name").value;
+  let estrato = document.getElementById("estrato").value;
+  let consumo = parseInt(document.getElementById("consumo").value);
+
+  if (nombre === "") {
+    alert("Por favor ingrese su nombre");
+    return;
   }
-  
-  function liquidarServicio(){
-    if(!validarDatos()){
+
+  if (consumo < 0) {
+    alert("Por favor ingrese un valor de consumo válido");
+    return;
+  }
+
+  let tarifaBasica = 0;
+  switch (estrato) {
+    case "1":tarifaBasica = 10000;break;
+    case "2":tarifaBasica = 15000;break;
+    case "3":tarifaBasica = 30000;break;
+    case "4":tarifaBasica = 60000;break;
+    case "5":tarifaBasica = 80000;break;
+    default:alert("Por favor seleccione un estrato válido");
       return;
-    }
-    
-    var name = document.getElementById("name").value 
-    var estrato=parseInt(document.getElementById("estrato").value)
-    var consumo=parseInt(document.getElementById("consumo").value)
-    var tarifaBasica=0,valorConsumo=0,valorPagar=0
-    switch(estrato){
-      case 1:tarifaBasica=10000;break
-      case 2:tarifaBasica=15000;break
-      case 3:tarifaBasica=30000;break
-      case 4:tarifaBasica=60000;break
-      case 5:tarifaBasica=80000;break  
-    }
-    valorConsumo=consumo*100
-    valorPagar=tarifaBasica + valorConsumo
-    document.getElementById("titulo").innerHTML="Valor a pagar: "
-    document.getElementById("valorPagar").innerHTML=valorPagar
   }
-  
+
+  let valorPagar = tarifaBasica + (consumo * 100);
+
+  document.getElementById("titulo").innerHTML = "Valor a pagar por servicio de agua:";
+  document.getElementById("valorPagar").innerHTML = "$" + valorPagar.toLocaleString();
+
+  return false;
+}
