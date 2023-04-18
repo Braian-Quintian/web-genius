@@ -10,7 +10,6 @@ body {
     font-family: 'Quicksand', sans-serif;
     padding: 0 1.5em;
 }
-
 .container {
     max-width: 1170px;
     margin-left: auto;
@@ -327,13 +326,6 @@ ul {
     border-radius: 6px;
     cursor: pointer;
 }
-
-.footer__copy{
-    --padding-container: 30px 0;
-    text-align: center;
-    color: #fff;
-}
-
 .footer__social {
     display: flex;
     justify-content: center;
@@ -352,6 +344,7 @@ ul {
     --padding-container: 30px 0;
     text-align: center;
     color: #fff;
+    padding: var(--padding-container);  
 }
 
 .footer__copy-right{
