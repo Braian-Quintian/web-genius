@@ -25,23 +25,25 @@
                     <div class="contact-form">
                         <form action="">
                             <p>
-                                <label for="name">Nombre</label>
-                                <input type="text" id="name" name="name" required>
+                                <label for="cedula">Cédula del cliente:</label>
+                                <input type="texto" id="cedula" name="cedula" value="0" required>
                             </p>
                             <p>
-                                <label for="estrato">Estrato</label>
-                                <select id="estrato" name="estrato" class="form-select" required>
+                                <label for="nombre">Nombre completo:</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </p>
+                            <p>
+                                <label for="sexo">Seleccione su sexo:</label>
+                                <select id="sexo" name="sexo" class="form-select" required>
                                   <option value="">Seleccione una opción</option>
-                                  <option value="1">1</option>
-                                  <option value="2">2</option>
-                                  <option value="3">3</option>
-                                  <option value="4">4</option>
-                                  <option value="5">5</option>
+                                  <option value="F">F</option>
+                                  <option value="M">M</option>
                                 </select>
                             </p>
                             <p>
-                                <label for="consumo">Consumo del Mes (cm3)</label>
-                                <input type="number" id="consumo" name="consumo" class="form-control" value="0" required>
+                                <label for="cantidadProductos">Cantidad de productos:</label>
+                                <input type="number" id="cantidadProductos" name="cantidadProductos" value="0" required>
+                                <div id="productos"></div>
                             </p>                            
                             <p>
                                 <label>Affair</label>
@@ -55,7 +57,7 @@
                         </form>
                     </div>
                     <div class="contact-info">
-                        <h4>Mr Braian</h4>
+                        <h4 id="Mrs"></h4>
                         <ul>
                             <li><i class="fas fa-map-marker-alt"></i> Teniendo en cuenta:</li>
                             <li><strong>Estrato:</strong> <span id="estrato-usuario"></span></li>

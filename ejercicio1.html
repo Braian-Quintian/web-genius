@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <!-- ANIMATE CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        <script src="assets/js/ejercicio1.js" defer ></script>
     </head>
     <body>
         <main>
@@ -23,23 +24,23 @@
         
                 <div class="contact-wrapper animated bounceInUp">
                     <div class="contact-form">
-                        <form action="">
-                            <p>
-                                <label for="name">Palabra</label>
-                                <input type="text" id="oracion" name="name" required>
-                            </p>
-
-                        
-                            <p class="block">
-                            <label>Message</label> 
-                                <textarea name="message" id="codigo" rows="3"></textarea>
-                            </p>
-                            <button class="btn btn-light" onclick="return cifrar()">Procesar</button>
-                        </form>
+                        <form id="cifrar"> 
+                            <div>
+                                <label for="oracion">Palabra:</label>
+                                <input type="text" id="oracion" required>
+                            </div>
+                            <div class="contain-btn">
+                                <input  class="btn"  type="submit" value="Procesar">
+                            </div>
+                           <!--  <button onclick="cifrar()"></button> -->
+                        </form>                        
                     </div>
                     <div class="contact-info">
                         <h4>Mr Braian</h4>
-                
+                        <p>
+                            <label>Resultado:</label>
+                            <span id="mensaje"></span>
+                        </p>
                         <label for="titulo" class="col-form-label" id="titulo"></label>
                         <label for="valorPagar" class="col-form-label" id="valorPagar"></label>
                     </div>
@@ -80,6 +81,6 @@
                 </div>
             </div>
         </footer>
-        <script src="assets/js/ejercicio2.js"></script>
+        
     </body>
 </html>
