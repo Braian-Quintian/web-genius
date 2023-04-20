@@ -14,7 +14,8 @@ Estrato   Tarifa Básica
    5       $80000
    El valor del consumo es la multiplicación entre el consumo del mes por $100 (valor de 1 cm3)
 */
-function liquidarServicio() {
+document.querySelector("#cifrar").addEventListener("submit", (e)=>{
+  e.preventDefault();
   let nombre = document.getElementById("name").value;
   let estrato = document.getElementById("estrato").value;
   let consumo = parseInt(document.getElementById("consumo").value);
@@ -46,6 +47,9 @@ function liquidarServicio() {
   document.getElementById("valorPagar").innerHTML = "$" + valorPagar.toLocaleString();
 
   return false;
+})
+function liquidarServicio() {
+
 }
 // Función para agregar o quitar la clase "white" del navbar dependiendo de la posición del scroll
 function handleNavbarScroll() {

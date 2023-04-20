@@ -23,13 +23,12 @@
         
                 <div class="contact-wrapper animated bounceInUp">
                     <div class="contact-form">
-                        <form action="">
-                            <p>
-                                <label for="cedula">Cédula del cliente:</label>
+                        <form id="liquidarServicio">
+                            <div>
+                                <label for="cedula">Nombre:</label>
                                 <input type="text" id="cedula" name="cedula" required>
-                            </p>
-                            <p>
-                                
+                            </div>
+                            <div>
                                 <label for="estrato">Estrato</label>
                                 <select id="estrato" name="estrato" class="form-select" required>
                                   <option value="">Seleccione una opción</option>
@@ -39,12 +38,14 @@
                                   <option value="4">4</option>
                                   <option value="5">5</option>
                                 </select>
-                            </p>
-                            <p>
+                            </div>
+                            <div>
                                 <label for="consumo">Consumo del Mes (cm3)</label>
                                 <input type="number" id="consumo" name="consumo" class="form-control" value="0" required>
-                            </p>                            
-                            <button class="btn btn-light" onclick="return liquidarServicio()">Procesar</button>
+                            </div>                            
+                            <div class="contain-btn">
+                                <input  class="btn"  type="submit" value="Procesar">
+                            </div>
                         </form>
                     </div>
                     <div class="contact-info">
