@@ -25,43 +25,21 @@
                     <div class="contact-form">
                         <form action="">
                             <p>
-                                <label for="name">Nombre</label>
-                                <input type="text" id="name" name="name" required>
+                                <label for="name">Palabra</label>
+                                <input type="text" id="oracion" name="name" required>
                             </p>
-                            <p>
-                                <label for="estrato">Estrato</label>
-                                <select id="estrato" name="estrato" class="form-select" required>
-                                  <option value="">Seleccione una opción</option>
-                                  <option value="1">1</option>
-                                  <option value="2">2</option>
-                                  <option value="3">3</option>
-                                  <option value="4">4</option>
-                                  <option value="5">5</option>
-                                </select>
-                            </p>
-                            <p>
-                                <label for="consumo">Consumo del Mes (cm3)</label>
-                                <input type="number" id="consumo" name="consumo" class="form-control" value="0" required>
-                            </p>                            
-                            <p>
-                                <label>Affair</label>
-                                <input type="text" name="affair">
-                            </p>
+
+                        
                             <p class="block">
                             <label>Message</label> 
-                                <textarea name="message" rows="3"></textarea>
+                                <textarea name="message" id="codigo" rows="3"></textarea>
                             </p>
-                            <button class="btn btn-light" onclick="return liquidarServicio()">Procesar</button>
+                            <button class="btn btn-light" onclick="return cifrar()">Procesar</button>
                         </form>
                     </div>
                     <div class="contact-info">
                         <h4>Mr Braian</h4>
-                        <ul>
-                            <li><i class="fas fa-map-marker-alt"></i> Teniendo en cuenta:</li>
-                            <li><strong>Estrato:</strong> <span id="estrato-usuario"></span></li>
-                            <li><strong>Tarifa Básica:</strong> <span id="tarifa-basica"></span></li>
-                            <li><strong><i class="fas fa-envelope-open-text"></i> Consumo del mes:</strong> <span id="consumo-usuario"></span></li>
-                        </ul>
+                
                         <label for="titulo" class="col-form-label" id="titulo"></label>
                         <label for="valorPagar" class="col-form-label" id="valorPagar"></label>
                     </div>
@@ -102,6 +80,6 @@
                 </div>
             </div>
         </footer>
-        <script src="assets/js/ejercicio1.js"></script>
+        <script src="assets/js/ejercicio2.js"></script>
     </body>
 </html>
