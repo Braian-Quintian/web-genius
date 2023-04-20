@@ -11,8 +11,23 @@
         <link rel="stylesheet" href="assets/css/projects.css">
         <link rel="stylesheet" href="assets/css/estilos.css">
         <title>WEB GENIUS | Presentacion</title>
+        <style>
+            table {
+              border-collapse: collapse;
+              width: 100%;
+            }
+            
+            th, td {
+              text-align: left;
+              padding: 8px;
+              border-bottom: 1px solid #ddd;
+            }
+            
+            th {
+              background-color: #f2f2f2;
+            }
+        </style>
     </head>
-
     <body>
         <!-- INICIO DEL NAV -->
         <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary" id="navbar">
@@ -53,7 +68,7 @@
                     <p>Los ejercicios planteados, fueron diseñados para ser resueltos en la sintaxis de Python, pero ahora
                         van a ser trasladados a JavaScript, siendo el mismo funcionamiento de estos mismos, pero con un
                         ligero cambio. Con la explicación de estos, ya no serán tan complicados de entender.</p>
-                    <button class="my-button1">Comienza ahora</button>
+                    <button class="my-button1"></button>
                 </div>
             </header>
         </div>
@@ -113,57 +128,129 @@
                                         <dl class="accordion__box">
                                             <dt class="accordion__patition">
                                                 <span class="accordion__number">01</span>
-                                                <span class="accordion__title">Liquidación de nómina</span>
+                                                <span class="accordion__title">Codificación</span>
                                             </dt>
                                             <dd class="accordion__text">
                                                 <!--INICIO DEL TEXO AQUÍ-->
                                                 <div class="card-body">
-                                                    <img src="assets/img/LIQUIDACION.png" class="hidden" id="myImg1">
-                                                    <p class="card-text">Para calcular la liquidación de nómina se deben tener
-                                                        en cuenta los siguientes datos de los empleados:</p>
-                                                    <ul>
-                                                        <li>Cédula</li>
-                                                        <li>Nombre</li>
-                                                        <li>Dirección</li>
-                                                        <li>Número de días trabajados<br>(de máximo 30)</li>
-                                                        <li>Salario básico</li>
-                                                    </ul>
-                                                    <p class="card-text">El proceso de liquidación consiste en calcular los
-                                                        valores devengados por los días trabajados y las deducciones que se le
-                                                        realizan al salario del empleado en un periodo de tiempo determinado con
-                                                        el fin de obtener un valor total a pagar.<br /><br></p>
-                                                    <p class="card-text">El neto por pagar a cada empleado se calcula como la
-                                                        diferencia entre el total devengado y el total deducido. Uno de los
-                                                        devengados hace referencia al valor a pagar por salario, que depende de
-                                                        los días trabajados. Otro devengado es el subsidio de transporte, que es
-                                                        de $140.000,00 para aquellos empleados con salario básico inferior a un
-                                                        salario mínimo vigente ($1.160.000,00).<br /><br></p>
-                                                    <p class="card-text">Con respecto a los deducidos, se tienen en cuenta los
-                                                        siguientes aspectos:</p>
-                                                    <ul>
-                                                        <li>Seguridad social, con un porcentaje del 4% sobre el salario básico.
-                                                        </li>
-                                                        <li>Pensión, con un porcentaje del 4% sobre el salario básico.</li>
-                                                    </ul>
-                                                    <p class="card-text">Además, se suministra M novedades de nómina para cada
-                                                        empleado, que corresponden a bonificaciones o descuentos particulares
-                                                        que suman al total devengado o suman al total deducido. De cada novedad
-                                                        del empleado se suministra:</p>
-                                                    <ul>
-                                                        <li>Tipo de novedad, que puede ser: 1=bonificación, 2=Descuentos</li>
-                                                        <li>Valor de la novedad</li>
-                                                    </ul>
-                                                    <p class="card-text">Con base en la información anterior, se debe calcular
-                                                        el neto a pagar a cada empleado y mostrar:</p>
-                                                    <ul>
-                                                        <li>Neto por pagar de cada empleado, visualizando el nombre y el neto a
-                                                            pagar</li>
-                                                        <li>Valor total de la nómina que debe pagar la empresa</li>
-                                                        <li>Valor total de la seguridad social de los empleados (La suma de
-                                                            todos los empleados)</li>
-                                                        <li>Valor total de pensión a pagar por los empleados (La suma de todos
-                                                            los empleados)</li>
-                                                    </ul>
+                                                    <img src="assets/img/codificacion.png" class="hidden" id="myImg1">
+                                                    <p class="card-text">Cifrado de un texto contenido en el archivo mediante la conversión de cada uno de sus caracteres al lenguaje MARTE I, el cúal se describe a continuación:</p>
+                                                    <table>
+                                                        <tr>
+                                                        <th>Carácter</th>
+                                                        <th>Equivalente</br>
+                                                            (6 caracteres sin
+                                                            espacios)</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>A</td>
+                                                            <td>..-...</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>B</td>
+                                                            <td>-.....</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>C</td>
+                                                            <td>.-.-..</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>D</td>
+                                                            <td>..-...</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>E</td>
+                                                            <td>...-..</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>F</td>
+                                                            <td>-...-.</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>G</td>
+                                                            <td>..-.--</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>H</td>
+                                                            <td>.--...</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>I</td>
+                                                            <td>--..-.</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>J</td>
+                                                            <td>...--.</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>K</td>
+                                                            <td>.---..</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>L</td>
+                                                            <td>--....</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>M</td>
+                                                            <td>.---..</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>N</td>
+                                                            <td>---...</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>O</td>
+                                                            <td>--..-.</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>P</td>
+                                                            <td>-..--.</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Q</td>
+                                                            <td>....-.</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>R</td>
+                                                            <td>..-...</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>S</td>
+                                                            <td>-....-</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>T</td>
+                                                            <td>.-.-.-</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>U</td>
+                                                            <td>..-..-</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>V</td>
+                                                            <td>...-.-</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>W</td>
+                                                            <td>-...--</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>X</td>
+                                                            <td>..-.--</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Y</td>
+                                                            <td>.--..-</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Z</td>
+                                                            <td>--..--</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Espacio</td>
+                                                            <td>------</td>
+                                                        </tr>
+                                                    </table>
                                                 </div>
                                                 <div class="card-footer">
                                                     <div class="card-tools">
@@ -282,35 +369,49 @@
                                             <dd class="accordion__text">
                                                 <!--INICIO DEL TEXO AQUÍ-->
                                                 <div class="card-body">
-                                                    <img src="assets/img/CIERRECONTABLE.png" alt="" class="hidden" id="myImg3">
-                                                    <p class="card-text"><br>El cierre mensual de contabilidad es un proceso
-                                                        importante que se realiza al final de cada mes contable para asegurarse
-                                                        de que los registros financieros estén completos y precisos. <br><br>
-                                                    </p>
-                                                    <p class="card-text">El proceso de cierre mensual de contabilidad
-                                                        generalmente implica los siguientes pasos:</p>
+                                                    <img src="assets/img/servicioAgua.png" alt="" class="hidden" id="myImg2">
+                                                    <p class="card-text">Dada la información sobre un usuario del servicio de agua:</p>
                                                     <ul>
-                                                        <li>Verificar y ajustar los saldos de las cuentas contables</li>
-                                                        <li>Registrar las entradas contables</li>
-                                                        <li>Conciliar los estados de cuenta bancarios</li>
+                                                        <li>Nombre</li>
+                                                        <li>Estrato(1,2,3,4,5)</li>
+                                                        <li>Consumo del mes (cm3)</li>
                                                     </ul>
-                                                    <p class="card-text">Actualización de saldos de cuentas</p>
-                                                    <p class="card-text">Se tiene la información sobre las N cuentas del plan de
-                                                        cuentas de una empresa, maestro de cuentas, de las cuales se
-                                                        conoce:<br><br></p>
-                                                    <ul>
-                                                        <li>Código cuenta</li>
-                                                        <li>Nombre cuenta</li>
-                                                        <li>Naturaleza de la cuenta, que puede ser:</li>
-                                                        <ul>
-                                                            <li>D: Débito, es decir del Debe</li>
-                                                            <li>H: Crédito, es decir del Haber</li>
-                                                        </ul>
-                                                        <li>Saldo de la cuenta al inicio del mes</li>
-                                                    </ul>
-                                                    <p class="card-text">Durante el mes, a cada cuenta se le realizan una serie
-                                                        de movimientos, que, al aplicarlos a las cuentas, permiten actualizar su
-                                                        saldo y producir el saldo al final del mes.<br></p>
+                                                    <p class="card-text">Se pide calcular el valor a pagar por servicio de agua, conociendo que el servicio es la tarifa básica depende del estrato, así:<br><br></p>
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                            <th>Estrato</th>
+                                                            <th colspan="2">Tarifa Básica</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                            <td>1</td>
+                                                            <td>$</td>
+                                                            <td>10000</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <td>2</td>
+                                                            <td>$</td>
+                                                            <td>15000</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <td>3</td>
+                                                            <td>$</td>
+                                                            <td>30000</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <td>4</td>
+                                                            <td>$</td>
+                                                            <td>60000</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <td>5</td>
+                                                            <td>$</td>
+                                                            <td>80000</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
                                                 </div>
                                                 <div class="card-footer">
                                                     <div class="card-tools">
@@ -339,7 +440,8 @@
                         <div class="testomony__texts">
                             <h2 class="subtitle">Mi nombre es Braian Quintian <span class="testimony__course">estudiante del
                                     Campus.</span></h2>
-                            <p class="testimony__review">¡Hola! También soy estudiante de ingeniería de sistemas. Me apasiona la tecnología y el desarrollo de software. Me considero una persona proactiva, responsable y comprometida con mis objetivos. Me gusta trabajar en equipo y enfrentar nuevos desafíos para seguir aprendiendo y creciendo profesionalmente.</p>
+                            <p class="testimony__review">
+                                ¡Hola! Soy estudiante de ingeniería de sistemas. Me apasiona la tecnología y el desarrollo de software. Me considero una persona proactiva, responsable y comprometida con mis objetivos. Me gusta trabajar en equipo y enfrentar nuevos desafíos para seguir aprendiendo y creciendo profesionalmente.</p>
                         </div>
 
                         <figure class="testimony__picture">
