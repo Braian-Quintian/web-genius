@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
         <meta name="author" content="SKYBROKERS">
         <link rel="shortcut icon" href="assets/img/destino.png" type="image/x-icon">
-        <title>WEB GENIUS | Ejercicio 3</title>
+        <title>WEB GENIUS | Ejercicio 2</title>
         <link rel="stylesheet" href="assets/css/main.css">
         <!-- GOOGLE FONTs -->
         <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
@@ -14,42 +14,50 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <!-- ANIMATE CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+        <script src="assets/js/ejercicio2.js" defer></script>
     </head>
     <body>
         <main>
             <div class="content">
 
-                <h1 class="logo">Ejercicio <span>3</span></h1>
+                <h1 class="logo">Ejercicio <span>2</span></h1>
         
                 <div class="contact-wrapper animated bounceInUp">
                     <div class="contact-form">
                         <form id="liquidarServicio">
-                            <div>
-                                <label for="cedula">Nombre:</label>
-                                <input type="text" id="cedula" name="cedula" required>
+                            <div class="contenido">
+                                <label for="cedula">Cédula del cliente:</label>
+                                <input class="contact-form" type="texto" id="cedula" name="cedula" value="0" required>
                             </div>
-                            <div>
-                                <label for="estrato">Estrato</label>
-                                <select id="estrato" name="estrato" class="form-select" required>
+                            <div class="contenido">
+                                <label for="nombre">Nombre completo:</label>
+                                <input class="contact-form" type="text" id="nombre" name="nombre" required>
+                            </div>
+                            <div class="contenido">
+                                <label for="sexo">Seleccione su sexo:</label>
+                                <select id="sexo" name="sexo" class="form-select" required>
                                   <option value="">Seleccione una opción</option>
-                                  <option value="1">1</option>
-                                  <option value="2">2</option>
-                                  <option value="3">3</option>
-                                  <option value="4">4</option>
-                                  <option value="5">5</option>
+                                  <option value="F">F</option>
+                                  <option value="M">M</option>
                                 </select>
                             </div>
-                            <div>
-                                <label for="consumo">Consumo del Mes (cm3)</label>
-                                <input type="number" id="consumo" name="consumo" class="form-control" value="0" required>
+                            <div class="contenido">
+                                <label for="cantidadProductos">Cantidad de productos:</label>
+                                <input class="contact-form" type="number" id="cantidadProductos" name="cantidadProductos" value="0" required>
+                                <div id="productos"></div>
                             </div>                            
+                            <div class="block">
+                            <label>Message</label> 
+                                <textarea name="message" rows="3"></textarea>
+                            </div>
                             <div class="contain-btn">
                                 <input  class="btn"  type="submit" value="Procesar">
                             </div>
                         </form>
                     </div>
                     <div class="contact-info">
-                        <h4>Mr Braian</h4>
+                        <h4 id="Mrs"></h4>
                         <ul>
                             <li><i class="fas fa-map-marker-alt"></i> Teniendo en cuenta:</li>
                             <li><strong>Estrato:</strong> <span id="estrato-usuario"></span></li>
