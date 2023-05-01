@@ -7,7 +7,7 @@ function hacking(){
 	
 	var letraTam=12; //Tamaño de la letras por pixel
 	var columnas=c.width/letraTam; //El ancho dividido por el tamano que tendra las letras
-	
+	 
 
 	var Texto="0"; //El testo que aparecera en pantalla
 	Texto=Texto.split("");//La función split() permite dividir una cadena de caracteres (string) en varios bloques y crear un array con estos

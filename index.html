@@ -2,84 +2,27 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
-        <meta name="author" content="SKYBROKERS">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <meta name="author" content="Braian-Quintian">
+        <meta name="viewport" content="width=device-width">
         <link rel="shortcut icon" href="assets/img/destino.png" type="image/x-icon">
         <link rel="stylesheet" href="assets/css/projects.css">
         <link rel="stylesheet" href="assets/css/estilos.css">
-        <title>WEB GENIUS | Presentacion</title>
-        <style>
-            table {
-              border-collapse: collapse;
-              width: 100%;
-            }
-            
-            th, td {
-              text-align: left;
-              padding: 8px;
-              border-bottom: 1px solid #ddd;
-            }
-            
-            th {
-              background-color: #f2f2f2;
-            }
-        </style>
-        <script>
-            function actualizar_saldo(saldo_inicial, movimientos) {
-                var saldo = saldo_inicial;
-                for (var i = 0; i < movimientos.length; i++) {
-                    var fecha = movimientos[i][0];
-                    var tipo = movimientos[i][1];
-                    var valor = movimientos[i][2];
-                    if (tipo === 'D') {
-                    saldo += valor;
-                    } else if (tipo === 'H') {
-                    saldo -= valor;
-                    }
-                }
-                return saldo;
-            }
 
-            function mostrar_cuentas(cuentas) {
-                var total_debito = 0;
-                var total_credito = 0;
-                var output = '<table><tr><th>Código</th><th>Nombre</th><th>Naturaleza</th><th>Saldo Final</th></tr>';
-                for (var i = 0; i < cuentas.length; i++) {
-                    var codigo = cuentas[i][0];
-                    var nombre = cuentas[i][1];
-                    var naturaleza = cuentas[i][2];
-                    var saldo_inicial = cuentas[i][3];
-                    var movimientos = cuentas[i][4];
-                    var saldo_final = actualizar_saldo(saldo_inicial, movimientos);
-                    output += '<tr><td>' + codigo + '</td><td>' + nombre + '</td><td>' + naturaleza + '</td><td>$' + saldo_final.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + '</td></tr>';
-                    if (naturaleza === 'D') {
-                    total_debito += saldo_final;
-                    } else if (naturaleza === 'H') {
-                    total_credito += saldo_final;
-                    }
-                }
-                output += '<tr><td>Total Débito:</td><td></td><td></td><td>$' + total_debito.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + '</td></tr>';
-                output += '<tr><td>Total Crédito:</td><td></td><td></td><td>$' + total_credito.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + '</td></tr>';
-                output += '</table>';
-                document.getElementById('tabla-cuentas').innerHTML = output;
-            }
-            function validar_naturaleza(naturaleza) {
-                return naturaleza.toUpperCase() === 'D' || naturaleza.toUpperCase() === 'H';
-                }
-                function validar_movimiento(movimiento) {
-                try {
-                    var fecha = movimiento[0];
-                    var tipo = movimiento[1];
-                    var valor = movimiento[2];
-                    return typeof fecha === 'string' && typeof tipo === 'string' && (typeof valor === 'number' || valor instanceof Number);
-                } catch (err) {
-                    return false;
-                }
-            }
-        </script>
+        <!-- font awesome cdn link-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        
+        
+        <title>WEB GENIUS | Presentacion</title>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="assets/js/script.js" defer></script>
+        <script src="assets/js/projects.js" defer></script>
+        <script src="assets/js/animation.js" defer></script>
+        <script src="assets/js/slider.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous" defer></script>
     </head>
     <body>
         <!-- INICIO DEL NAV -->
@@ -93,11 +36,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="nav justify-content-center">
-                        <li class="nav-item"><a href="#encabezado" class="nav-link" id="navilin"
+                        <li class="nav-item"><a href="#encabezado" class="nav-link"
                                 data-link="inicio">Inicio</a></li>
-                        <li class="nav-item"><a href="#acerca" class="nav-link" id="navilin"
+                        <li class="nav-item"><a href="#acerca" class="nav-link"
                                 data-link="acerca-de-nosotros">Acerca de nosotros</a></li>
-                        <li class="nav-item"><a href="#ejercicios-python" class="nav-link" id="navilin"
+                        <li class="nav-item"><a href="#ejercicios-python" class="nav-link"
                                 data-link="ejercicios-python">Ejercicios Python</a>
                         </li>
                     </ul>
@@ -121,7 +64,6 @@
                     <p>Los ejercicios planteados, fueron diseñados para ser resueltos en la sintaxis de Python, pero ahora
                         van a ser trasladados a JavaScript, siendo el mismo funcionamiento de estos mismos, pero con un
                         ligero cambio. Con la explicación de estos, ya no serán tan complicados de entender.</p>
-                    <button class="my-button1"></button>
                 </div>
             </header>
         </div>
@@ -186,7 +128,7 @@
                                             <dd class="accordion__text">
                                                 <!--INICIO DEL TEXO AQUÍ-->
                                                 <div class="card-body">
-                                                    <img src="assets/img/codificacion.png" class="hidden" id="myImg1">
+                                                    <img src="assets/img/codificacion.png" class="hidden" id="myImg1" alt="">
                                                     <p class="card-text">Cifrado de un texto contenido en el archivo mediante la conversión de cada uno de sus caracteres al lenguaje MARTE I, el cúal se describe a continuación:</p>
                                                     <table>
                                                         <tr>
@@ -342,27 +284,30 @@
                                                     <ul>
                                                         <li>Cédula del cliente</li>
                                                         <li>Nombre del cliente</li>
-                                                        <li>Sexo del cliente:</li>
-                                                        <p id="texto" class="hidden"><span id="femenino">Femenino</span> <span
+                                                        <li>Sexo del cliente:
+                                                            <p id="texto" class="hidden"><span id="femenino">Femenino</span> <span
                                                                 id="masculino">Másculino</span></p>
+                                                        </li>
                                                     </ul>
                                                     <p class="card-text">Cada uno de los clientes realizan entre 1 a M compras
                                                         de productos. La información que se procesa por cada cliente es la
                                                         siguiente:<br><br></p>
                                                     <ul>
                                                         <li>M, como la cantidad de productos a procesar</li>
-                                                        <li>Para cada producto, ingresar:</li>
-                                                        <ul>
-                                                            <li>Código del producto.</li>
-                                                            <li>Valor unitario del producto.</li>
-                                                            <li>Cantidad comprada</li>
-                                                            <li>Tipo de IVA, que puede ser:</li>
+                                                        <li>Para cada producto, ingresar:
                                                             <ul>
-                                                                <li>Exento de IVA</li>
-                                                                <li>Bienes, donde se aplica como IVA el 5%.</li>
-                                                                <li>General, donde se aplica como IVA el 19%.</li>
+                                                                <li>Código del producto.</li>
+                                                                <li>Valor unitario del producto.</li>
+                                                                <li>Cantidad comprada</li>
+                                                                <li>Tipo de IVA, que puede ser:
+                                                                    <ul>
+                                                                        <li>Exento de IVA</li>
+                                                                        <li>Bienes, donde se aplica como IVA el 5%.</li>
+                                                                        <li>General, donde se aplica como IVA el 19%.</li>
+                                                                    </ul>
+                                                                </li>
                                                             </ul>
-                                                        </ul>
+                                                        </li>
                                                     </ul>
                                                     <p class="card-text">
                                                         El gerente de una tienda necesita un programa que calcule el valor de
@@ -488,7 +433,7 @@
             <!-- FIN DE LAS CARTAS-->
             <section class="testimony" id="acerca">
                 <div class="testimony__container container">
-                    <img src="assets/icon/leftarrow.svg" class="testimony__arrow" id="before">
+                    <img src="assets/icon/leftarrow.svg" class="testimony__arrow" id="before" alt="">
                     <section class="testimony__body testimony__body--show" data-id="1">
                         <div class="testomony__texts">
                             <h2 class="subtitle">Mi nombre es Braian Quintian <span class="testimony__course">estudiante del
@@ -498,7 +443,7 @@
                         </div>
 
                         <figure class="testimony__picture">
-                            <img src="assets/img/braian.png" class="testimony__img">
+                            <img src="assets/img/braian.png" class="testimony__img" alt="">
                         </figure>
                     </section>
 
@@ -510,10 +455,10 @@
                         </div>
 
                         <figure class="testimony__picture">
-                            <img src="assets/img/mariana.png" class="testimony__img">
+                            <img src="assets/img/mariana.png" class="testimony__img" alt="">
                         </figure>
                     </section>
-                    <img src="assets/icon/right.svg" class="testimony__arrow" id="next">
+                    <img src="assets/icon/right.svg" class="testimony__arrow" id="next" alt="">
                 </div>
             </section>
             <div class="footer">
@@ -540,10 +485,16 @@
                             <div class="footer__col footer__col--3">
                                 <h2 class="footer__title">Síguenos</h2>
                                 <div class="footer__social">
-                                    <a href="#" class="footer__social-link"><i class="fab fa-facebook"></i></a>
-                                    <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
-                                    <a href="#" class="footer__social-link"><i class="fab fa-twitter"></i></a>
-                                </div>
+                                    <a href="#" class="footer__social-link" aria-label="Facebook">
+                                      <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="footer__social-link" aria-label="Instagram">
+                                      <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="#" class="footer__social-link" aria-label="Twitter">
+                                      <i class="fab fa-twitter"></i>
+                                    </a>
+                                </div>                                  
                             </div>
                         </div>
                         <div class="footer__copy">
@@ -553,12 +504,5 @@
                 </footer>
             </div>
         </main>
-        <script src="assets/js/script.js"></script>
-        <script src="assets/js/projects.js"></script>
-        <script src="assets/js/animation.js"></script>
-        <script src="assets/js/slider.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"></script>
     </body>
 </html>
